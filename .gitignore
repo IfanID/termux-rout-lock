@@ -1,0 +1,17 @@
+# Rahasia — JANGAN di-commit (berisi hash PIN & kode pemulihan)
+config.conf
+
+# State runtime
+lock.state
+termux-lock-status.txt
+
+# Backup versi lama
+*.bak-*
+*.bak
+
+# Python
+__pycache__/
+*.pyc
+
+# Ekspor percakapan (berisi data pribadi)
+ekspor-sesi/
