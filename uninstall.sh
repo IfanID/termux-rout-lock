@@ -123,8 +123,12 @@ if [ -f "$HOME/.hushlogin" ] && [ ! -s "$HOME/.hushlogin" ]; then
   echo "  [ok] ~/.hushlogin dihapus"
 fi
 
-# --- hapus folder ---
+# --- hapus folder (backup ikut terhapus karena ada di dalamnya) ---
 if [ "$KEEP" != "1" ] && [ -d "$DEST" ]; then
+  if [ -d "$DEST/backup" ]; then
+    n=$(ls -1 "$DEST/backup" 2>/dev/null | wc -l | tr -d ' ')
+    echo "  [!!] $n backup config (berisi hash PIN) ikut dihapus"
+  fi
   rm -rf "$DEST"
   echo "  [ok] folder $DEST dihapus"
 fi

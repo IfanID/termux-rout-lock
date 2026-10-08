@@ -5,6 +5,9 @@ config.conf
 lock.state
 termux-lock-status.txt
 
+# Backup config (berisi hash PIN & kode pemulihan)
+backup/
+
 # Backup versi lama
 *.bak-*
 *.bak
